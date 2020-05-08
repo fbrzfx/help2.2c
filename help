@@ -1,0 +1,58 @@
+#include <bits/stdc++.h> 
+#include <string>
+#include <map>
+using namespace std;
+
+std::string x;
+std::string a = "y";
+std::string s;
+std::string l;
+
+int main()
+{
+ // map 
+    std::map<char, std::string> morse; 
+  
+    // Mapping values to keys 
+    morse['A'] = ".-"; 
+    morse['B'] = "-..."; 
+    morse['C'] = "-.-."; 
+    morse['D'] = "-..";
+    morse['E'] = "."; 
+    morse['F'] = "..-."; 
+    morse['G'] = "--."; 
+    morse['H'] = "...."; 
+    morse['I'] = ".."; 
+    morse['J'] = ".---"; 
+    morse['K'] = "-.-"; 
+    morse['L'] = ".-.."; 
+    morse['M'] = "--"; 
+    morse['N'] = "-."; 
+    morse['O'] = "---"; 
+    morse['P'] = ".--."; 
+    morse['Q'] = "--.-"; 
+    morse['R'] = ".-."; 
+    morse['S'] = "..."; 
+    morse['T'] = "-"; 
+    morse['U'] = "..-"; 
+    morse['V'] = "...-"; 
+    morse['W'] = ".--"; 
+    morse['X'] = "-..-"; 
+    morse['Y'] = "-.--"; 
+    morse['Z'] = "--..";  
+
+
+    while (a == "y") {
+            cout << "enter your next letter in UPPERCASE:";
+            cin >> x;
+            s.append(x);
+            cout << "is there more letters? y or n?";
+            cin >> a;
+    }
+    for(int i = 0; i < s.length(); i++)
+    {
+        l.append(morse.find(s[i])->second);
+    }
+}
+
+
